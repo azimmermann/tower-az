@@ -1,3 +1,8 @@
 ---
 
   # Main playbook for environment configuration
+
+  # Test playbook with hello world
+  - import_playbook: helloworld.yml
+    tags:
+      - test
