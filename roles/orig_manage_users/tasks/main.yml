@@ -1,0 +1,9 @@
+---
+
+  # Main task for managing users
+  # Can add additional tasks for removing users/groups or other functionality
+  - name: Importing add-groups task
+    import_tasks: add-groups.yml
+
+  - name: Importing add-users task
+    import_tasks: add-users.yml

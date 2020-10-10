@@ -1,0 +1,81 @@
+---
+
+  # Public keys can be added/removed here. Optionally I can configure this pull the value from a file rather than
+  # store it as a variable to pass. It is a public key and therefore should be safe to be stored unencrypted.
+  # State can be set to absent if we want to remove a user
+  users:
+    - username: azimmermann
+      comment: Aerin Zimmermann
+      group: nixadm
+      exclusive: yes
+      state: present
+      public_key:
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDKCisFmDUVkbFkFZ9u5q6alNpyRSViWT\
+        8eNVLPxmWvtPtpWnql17rbc/7OjNfWYB/a8u7+VyA23LZFKhr/CeqvU+1sMMEorjf7fdbI\
+        xI5ayIkfVgwP3LGjRMlRwvoz+kbSWV7Ci9gIjsdJFOhie2aEWdA6NLvxn7XeIgKure7l4m\
+        qH/sD7LK9sWanu0crOKALFS9mftrUDDrEuJ+sxe6mRQBp37WOjqPR2MzSTZHi7eKTjaGWG\
+        BVOuWLO0r00JdBgf1xF10VEBruNlWRbA3j6DU1xRB7T6i/XE/ofbB7YCZ8dnHzgvT2I1th\
+        p7Wt/ZV40W3j0Yyyldj3vvRVlgACAb azimmermann"
+    - username: amckinstry
+      comment: Aaron McKinstry
+      group: nixadm
+      exclusive: yes
+      state: present
+      public_key:
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJjXZq4sev2SqHDIagB4i6ZIR8CrHPhg\
+        YnFDo6L0+a1Bklgx3zzGdV3gh4yYFaZyh75dy0AQ7Z1j8lyQR3A9ixBHyT6HiLgptL7b8G\
+        s9Jl5dey3P8quUGp81/UCZZc5tVPZDAnfLzH+YPR61GdxQlT5i6qxCz4/T3mfJ8G7bvQDj\
+        RlLqscrFE2lsesHoivCgBYuHPtTToQMy6QG5evff3OqWA4h6dHBNZLVAM2T3LneSZdrLYl\
+        mBqiXjah2GVpg2cs1NIi8NS5/g9haaOoSdMriGk/6H9D+9++M/RmGjMvy6wniraSWRLzpS\
+        N1q0I6a/nPJsGbpI2oOvcaT8qdn9wH amckinstry"
+    - username: mwatkins
+      comment: Mike Watkins
+      group: nixadm
+      exclusive: yes
+      state: present
+      public_key:
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqUna/7iB2ul0rrWcI/6vASbFX/trrE9\
+        nfzwsM70keO4yHJ+s38i7oWC+0FD+VmozGlXhIOU3fQIyLNtU2N/AHLuhBu5YKQvRiNys2\
+        g4pS0MhRCgumzn/tp8Inu0Xn6mGXHCnqzhAIxpu3o7mMq3Jq96W2RxbcSX1IsRWsxzLD5b\
+        DI02MpgVSVFtdotatVqvVLdPG1+JMQf42yFGl+4iKUNUzkQBEUg4FC6oD7c7ZxhFFO4PQ7\
+        l6xu4ZNcH+XOQ3fBWEkK83YqGUZ8HIYwAW0aplMeGwZSr/aQ4EQqFGVaP/kOv6QnP68or6\
+        TrlwXGZ96NXIzw6IYF9mRCT4MY4H2L mwatkins"
+    - username: zpopova
+      comment: Zip Popova
+      group: nixadm
+      exclusive: yes
+      state: present
+      public_key:
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCmDBLaNncQkMZD34bMAB36ufASusL1lb\
+        bBxOVQZKhXQ9jeZ0WVty8+Vg9YXZwemIhJoeD0pQmKSLkFk/OcmNxBuHSbpglrojzIh+Kq\
+        /x9dtPQozFbKEKTlU3JelVZw81jsRrflGIZFU6lPHCb7wU/+ksBeLeBlXtBmmClrCCwQeN\
+        BG4fFXnUWW9AnYdAuy7pRn7GLPtmarzjufjt28p0Bwc5zGTiZLRcNi2G3Z7jyxG9+YLr5z\
+        TvQaze97494V1XzGG8WLbY1TshVTZKFdaLu+pnVbe53uAFprsEaPn5Hx6NEuATMWzafdpY\
+        N/rUGfZWn9uj+64FtW3UbBK+HOHVbt zpopova"
+    - username: devops
+      comment: DevOps user
+      group: nixadm
+      exclusive: yes
+      state: present
+      public_key:
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCreJ2/mMGK38ia174Q5c4ZPtfpuUXj1WR9PAK70p/2W3NyaKNWKYRXDxL0Ab2F0QfkLXoH+2ZjrHEAegemk6XsQiK2+a9h4T4AHiGDoGa4m7jnAm/OSn2Ncz1IZj/B8WKs14u8yFreK3G56pqFK8TTp42vjB70ub+nmkRhFThU4t6tY5z5RoLtFPyV6xabCbilh5HyOXkO3KNaj6dnOXtX4gSRjFG2ixM/1SLMnC/L6aPwSccSxufRIugQUNWZW2clf/YtEvTTx9RkR4Gcm/u0ci1WgxADB7Y/gigiai5wsDLMtKOxfBbRHZ/d8kXcAvjDYkfi6KIifI6NFgXI8iZ9  devops"
+    - username: tmauney
+      comment: Trent Mauney
+      group: nixadm
+      exclusive: yes
+      state: present
+      public_key:
+        "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAiRuzbQihAH1XmDplEQMNghtegQpRu3/2N3Bk/b0pYxg2sgg1cT1GelVsZVTphb6vtpjIqoU3wegWYdOKscDiBZOd/nX3Zevsn0eJ2XljKhHYVnr899pTfJLenvsNxr2lC3jNZwHdRhl1wcMXWmApltgj8uYVwkovtipz4wHpIRHGCmu+8qbXFqernJmKIAAyaJstc0d9pKyen8Z1jIDCEs2lbvI/rPsomCXvMVE9xozin3sQS96lwbpytdOLhhsY7dUyMWY0WelBLycxUTQx8ij4LA/geDUHfjfv2NxZTXDsF+aUS1UdXLpq5wSSPU0OouZm0S0Szi//MiwC+FUMsw== rsa-key-20190604"
+    - username: hbuckner
+      comment: Hadrian Buckner
+      group: nixadm
+      exclusive: yes
+      state: present
+      public_key:
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDEW+WBX8pJCyLDaQ3M2a3V8LFPFXAE2nMspzVTHfjxG39MEQi6bt9bIIPiBF4zkKREIw1cXHU5dijuZScB+0+iIOqMXQOTThycJy15psVfHjZ1NXYJLLcfxp2VHJ1HF7mHMrnBBSWnmOxQ2hhGYJsLXgOVkP2J39DY1fybP0gyj3nMgYLuOS/3nbG8ksQoGmdRW/WocWUO8p7joyOXL7wQvfRo4EokjsLeLdCPWbBPbTjIU4tidrIrKEsDXdbLi3LE81JqsCdiMlfeUJSqD07k8AXctoFV9HBU6f7UDcsE3mre9+z5C4T+8pFctHkGHK88rd2TzTYbhvtZHFd9pQKz hbuckner"
+
+  # Defines the groups that we are going to add to the host
+  grps:
+    - groupname: nixadm
+      gid: ''
+      system_group: no

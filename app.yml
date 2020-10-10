@@ -1,0 +1,21 @@
+---
+
+  - name: Running play for CIRRAS APPLICATION configuration
+    hosts: cirras_app
+    remote_user: ec2-user
+    #debugger: on_failed
+    become: yes
+    become_method: sudo
+
+    tasks:
+
+  # Setup administrative groups and users
+  - name: Importing [manage-users] role
+    import_role:
+      name: manage_users
+    tags:
+      - manage_users
+
+      # - name: Importing [jboss_app_configure] role
+      #   import_role:
+      #     name: jboss_app_configure

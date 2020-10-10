@@ -1,0 +1,20 @@
+---
+
+  # Adds groups defined in vars/main.yml
+  - name: Adding groups
+    group:
+      name: "{{ item['groupname'] }}"
+      gid: "{{ item['gid'] | default(omit, true) }}"
+      system: "{{ item['system_group'] | default(omit, true) }}"
+      state: present
+    loop: "{{ grps }}"
+
+  # Templates out nixadm for non-password sudo access and validates with visudo
+  - name: Add nixadm group to sudoers and validating
+    template:
+      src: 80-nixadm-group.j2
+      dest: /etc/sudoers.d/80-nixadm-group
+      owner: root
+      group: root
+      mode: 0440
+      validate: /usr/sbin/visudo -cf %s

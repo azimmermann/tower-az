@@ -1,0 +1,10 @@
+all:
+  hosts:
+    ansible-central:
+  children:
+    app:
+      hosts:
+        app01:
+    client:
+      hosts:
+        client01:

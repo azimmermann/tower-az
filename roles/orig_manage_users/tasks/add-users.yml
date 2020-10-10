@@ -1,0 +1,26 @@
+---
+
+  # Adds all users and transfers authorized keys to remote server for SSH access
+  # Uses ../vars/main.yml to specificy list of dict's with user information, including public keys
+
+  # Adds all users from users stored in ../vars/main.yml
+  - name: Adding required users
+    user:
+      name: "{{ item['username'] }}"
+      group: "{{ item['group'] }}"
+      groups: "{{ omit if item['groups'] is undefined else item['groups'] }}"
+      state: present
+    loop: "{{ users }}"
+    loop_control:
+      label: "{{ item.username }}"
+
+  # Creates authorized_keys file on
+  - name: Setting authorized keys for users
+    authorized_key:
+      user: "{{ item['username'] }}"
+      state: "{{ item['state'] }}"
+      key: "{{ item['public_key'] }}"
+      exclusive: "{{ item['exclusive'] | default(yes)  }}"
+    loop: "{{ users }}"
+    loop_control:
+      label: "{{ item.username }}"

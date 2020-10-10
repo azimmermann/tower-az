@@ -1,0 +1,6 @@
+---
+
+  grps:
+    - groupname: appadms
+      gid: ''
+      system_group: no

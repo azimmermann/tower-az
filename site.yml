@@ -6,3 +6,13 @@
   - import_playbook: helloworld.yml
     tags:
       - test
+
+  # Main playbook for Cirras application
+  - import_playbook: app.yml
+    tags:
+      - app
+
+  # Main playbook for Cirras proxy
+  - import_playbook: proxy.yml
+    tags:
+      - proxy

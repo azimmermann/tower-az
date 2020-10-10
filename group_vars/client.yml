@@ -1,0 +1,10 @@
+---
+  # Defines the groups that we are going to add to the host
+#  grps:
+#    - groupname: nixadm
+#      gid: ''
+#      system_group: no
+  grps:
+    - groupname: clients
+      gid: ''
+      system_group: no
