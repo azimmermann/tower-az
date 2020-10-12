@@ -9,12 +9,12 @@
 
     tasks:
 
-  # Setup administrative groups and users
-  - name: Importing [manage-users] role
-    import_role:
-      name: manage_users
-    tags:
-      - manage_users
+      # Setup administrative groups and users
+      - name: Importing [manage-users] role
+        import_role:
+          name: manage_users
+        tags:
+          - manage_users
 
       # - name: Importing [jboss_app_configure] role
       #   import_role:
