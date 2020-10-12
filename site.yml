@@ -13,6 +13,6 @@
       - app
 
   # Main playbook for Cirras proxy
-  - import_playbook: proxy.yml
+  - import_playbook: client.yml
     tags:
-      - proxy
+      - client
