@@ -3,9 +3,9 @@
   # Main playbook for environment configuration
 
   # Test playbook with hello world
-  - import_playbook: helloworld.yml
-    tags:
-      - test
+  # - import_playbook: helloworld.yml
+  #   tags:
+  #     - test
 
   # Main playbook for Cirras application
   - import_playbook: app.yml
