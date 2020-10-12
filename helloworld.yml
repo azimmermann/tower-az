@@ -1,8 +1,8 @@
 ---
-  - name: Hello World!
-    hosts: all
+  - name: Hello World
+    hosts: app
 
     tasks:
 
-      - name: Hello World!
+      - name: Hello World
         shell: echo "Hi! Tower is working. With AZ edit."
