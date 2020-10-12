@@ -1,7 +1,7 @@
 ---
 
   - name: Running app.yml playbook
-    # hosts: cirras_app
+    hosts: app
     # remote_user: ec2-user
     #debugger: on_failed
     become: yes
