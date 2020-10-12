@@ -1,6 +1,9 @@
 ---
 
   grps:
-    - groupname: appadms
+    - groupname: appadm
+      gid: ''
+      system_group: no
+    - groupname: nixadm
       gid: ''
       system_group: no
