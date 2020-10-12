@@ -1,7 +1,7 @@
 ---
 
   - name: Running client.yml playbook
-    #hosts: cirras_proxy
+    hosts: client
     #remote_user: ec2-user
     #debugger: on_failed
     become: yes
