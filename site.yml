@@ -7,12 +7,12 @@
     tags:
       - test
 
-  # Main playbook for Cirras application
+  # Main playbook for app
   - import_playbook: app.yml
     tags:
       - app
 
-  # Main playbook for Cirras proxy
+  # Main playbook for client servers
   - import_playbook: client.yml
     tags:
       - client
